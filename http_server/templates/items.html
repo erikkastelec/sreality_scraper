@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scraped Items</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .items-list {
+            list-style: none;
+            padding: 0;
+        }
+        .item {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+
+        }
+        .item:last-child {
+            border-bottom: none;
+        }
+            
+        .item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scraped Items</h1>
+        <ul class="items-list">
+            {% for item in items %}
+                <li class="item">
+                    <strong>{{ item[0] }}</strong><br>
+                    <img src="{{ item[1] }}" alt="{{ item[0] }}">
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

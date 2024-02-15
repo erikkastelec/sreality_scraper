@@ -1,0 +1,12 @@
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile"
+	},
+	"forwardPorts": [5000],
+	"extensions": [
+		"ms-python.python"
+	]
+}
+
